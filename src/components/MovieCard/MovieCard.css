@@ -1,0 +1,64 @@
+.movie-card {
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+}
+
+.movie-card:focus-visible {
+    outline: none;
+}
+
+.movie-card__img {
+    width: 100%;
+    border-radius: 16px;
+    height: 100%;
+    border: 1px solid #FFFFFF40;
+    box-shadow: 0px 0px 80px 0px #FFFFFF54;
+    transition: border-color 0.3s ease-in;
+}
+
+.movie-card:hover .movie-card__img,
+.movie-card:focus-visible .movie-card__img {
+    border-color: #fff;
+    outline: none;
+}   
+
+.movie-card__fallback {
+    border-radius: 16px;
+    border: 1px solid #FFFFFF40;
+    box-shadow: 0px 0px 80px 0px #FFFFFF54;
+    padding: 16px;
+    height: 333px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: border-color 0.3s ease-in;
+}
+
+.movie-card:hover .movie-card__fallback,
+.movie-card:focus-visible .movie-card__fallback {
+    border-color: #fff;
+    outline: none;
+}
+
+.movie-card__fallback-title {
+    text-align: center;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 32px;
+}
+
+.movie-card__rank {
+    position: absolute;
+    top: -12px;
+    left: -12px;
+
+    color: #6A5DC2;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32px;
+    background-color: #fff;
+    border-radius: 50px;
+    padding: 8px 24px;
+    text-align: center;
+}

@@ -1,0 +1,8 @@
+.user-view {
+   cursor: pointer;
+   font-weight: 400;
+   font-size: 24px;
+   line-height: 32px;
+   border-bottom: 1.5px solid #DC5DFC;
+   padding-bottom: 8px;
+}

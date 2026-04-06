@@ -1,0 +1,80 @@
+.main-page {
+    padding: 32px 0 120px;
+}
+
+.main-page__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+/* Топ 10 фильмов */
+.top-movies__list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 224px);
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: 64px 40px;
+    margin: 0;
+    padding: 0;
+}
+
+.top-movies__list-item {
+    height: 100%;
+}
+
+.top-movies__title {
+    margin: 0 0 64px 0;
+    padding: 0;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 48px;
+}
+
+@media (max-width: 1175px) {
+    .top-movies__list {
+        gap: 40px 24px;
+    }
+}
+
+@media (max-width: 530px) {
+    .main-page {
+        padding: 0 0 32px;
+    }
+
+    .main-page__wrapper {
+        gap: 56px;
+    }
+
+    .top-movies__title {
+        font-size: 24px;
+        line-height: 32px;
+        margin-bottom: 40px;
+    }
+
+    .top-movies__list {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        gap: 0 40px;
+        padding: 80px 20px;
+        margin: -80px -20px;
+        align-items: center;
+        scroll-snap-type: x mandatory;
+    }
+
+    .top-movies__list-item {
+        flex: 0 0 auto;
+        scroll-snap-align: center;
+    }
+
+    .top-movies__list .movie-card__img,
+    .top-movies__list .movie-card__fallback {
+        width: 224px;
+    }
+
+    .top-movies__list::-webkit-scrollbar {
+      display: none;
+    }
+}

@@ -1,0 +1,149 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Play", "Arial", sans-serif;
+    color: #fff;
+    background: linear-gradient(180deg, #000000 0%, rgba(39, 36, 36, 0.7) 100%),
+                linear-gradient(178.73deg, rgba(39, 135, 245, 0.18) -17.53%, rgba(163, 147, 245, 0.18) 131.74%);
+}
+
+#root {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex-grow: 1;
+}
+
+img {
+  display: block;
+  height: auto;
+  object-fit: cover;
+}
+
+a {
+    font-family: "Play", "Arial", sans-serif;
+    text-decoration: none;
+    color: #fff;
+}
+
+.visually-hidden {
+    position: absolute; 
+    width: 1px; 
+    height: 1px; 
+    overflow: hidden; 
+    white-space: nowrap; 
+    clip-path: inset(50%);
+}
+
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 80px;
+}
+
+.btn {
+    display: block;
+    border: none;
+    cursor: pointer;
+    font-family:  "Play", "Arial", sans-serif;
+    border-radius: 28px;
+    color: #fff;
+    padding: 16px;
+    text-align: center;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 700;
+    transition: color 0.3s ease-in;
+}
+
+.btn--primary {
+    background-color: #393B3C;
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    transition: background-color 0.3s ease-in, border-color 0.3s ease-in;
+}
+
+.btn--primary:hover,
+.btn--primary:focus {
+    color: rgba(255, 255, 255, 0.5);
+    background-color: #747474;
+    border-color: rgba(0, 0, 0, 0.4);
+    outline: none;
+}
+
+.btn--blue {
+    background-color: #67A5EB;
+    transition: background-color 0.3s ease-in;
+}
+
+.btn--blue:hover,
+.btn--blue:focus-visible {
+    background-color: #45526E;
+    color: rgba(255, 255, 255, 0.5);
+    outline: none;
+}
+
+.btn--big {
+    padding: 16px 48px;
+}
+
+.btn--small {
+    padding: 16px 22px;
+    line-height: 0;
+}
+
+.rating--excellent { background-color: #A59400; } 
+.rating--good { background-color: #308E21; } 
+.rating--average { background-color: #777777; } 
+.rating--bad { background-color: #C82020; }
+
+.main-title {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 56px;
+    margin: 0 0 64px;
+}
+
+.section-offset {
+    padding: 64px 0 160px;
+}
+
+/* Small-desktop 1024px */
+@media (max-width: 1023px) {
+    .container {
+        padding: 0 40px;
+    }    
+
+    .section-offset {
+        padding: 16px 0 40px;
+    }
+}
+
+@media (max-width: 767px) {
+    .container {
+        padding: 0 20px;
+    }
+
+    .main-title {
+        font-size: 40px;
+        line-height: 48px;
+        margin: 0 0 40px;
+    }
+}
+
+/* Mobile 375px */
+@media (max-width: 375px) {
+    .main-title {
+        font-size: 24px;
+        line-height: 32px;
+        margin: 0 0 40px;
+    }
+}

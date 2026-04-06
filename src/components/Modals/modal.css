@@ -1,0 +1,171 @@
+.modal-overlay {
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100vw;
+   height: 100vh;
+   background-color: rgba(0, 0, 0, 0.5);
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   z-index: 1000;
+   padding: 0 12px;
+}
+
+.modal {
+   position: relative;
+   z-index: 200;
+   border-radius: 24px;
+   background-color: #fff;
+   padding: 64px 40px;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.modal--login {
+   min-width: 420px;
+   min-height: 450px;
+}
+
+.modal--register {
+   min-width: 420px;
+   min-height: 710px;   
+}
+
+.modal--success {
+   min-width: 420px;
+   min-height: 382px;     
+}
+
+.modal--success .btn--blue {
+   width: 100%;
+}
+
+.modal__close-btn {
+   position: absolute;
+   right: -72px;
+   top: 0;
+   width: 48px;
+   height: 48px;
+   border-radius: 50%;
+   border: none;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   cursor: pointer;
+}
+
+.modal__logo {
+   margin: 0 auto 40px;
+}
+
+.modal__title {
+   font-weight: 700;
+   font-size: 24px;
+   line-height: 32px;
+   color: #000;
+   margin: 0 0 24px;
+}
+
+.modal form {
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   margin: 0 0 12px;
+}
+
+.modal__custom-input {
+   position: relative;
+   margin-bottom: 12px;
+}
+
+.modal__custom-input:last-of-type {
+   margin-bottom: 24px;
+}
+
+.modal__input {
+   font-family: "Play", "Arial", sans-serif;
+   width: 100%;
+   padding: 16px 16px 16px 52px;
+   border-radius: 8px;
+   border: 1px solid rgba(0, 0, 0, 0.4);
+   background-color: #fff;
+   transition: border-color 0.1s ease-in;
+}
+
+.modal__input-icon {
+   position: absolute;
+   left: 16px;
+   top: 12px;
+   color: rgba(0, 0, 0, 0.4);
+   transition: color 0.1s ease-in;
+}
+
+.modal__custom-input:hover .modal__input-icon,
+.modal__input:focus-within .modal__input-icon {
+   color: #B4A9FF;
+}
+
+.modal__custom-input:hover .modal__input,
+.modal__custom-input:focus-within .modal__input {
+   border-color: #B4A9FF;     
+   outline: none;
+}
+
+.modal__input--error {
+   border: 1px solid #FF7575;
+}
+
+.modal__btn {
+   color: #000;
+   background-color: transparent;
+}
+
+.modal__error {
+   color: #FF7575;
+   margin: 0;
+   margin-top: 2px;
+}
+
+.modal__text {
+   font-weight: 400;
+   font-size: 18px;
+   line-height: 24px;
+   text-align: center;
+   padding: 0;
+   margin: 0 0 24px;
+   color: #000;
+   max-width: 320px;
+}
+
+
+@media (max-width: 600px) {
+   .modal__close-btn {
+      right: 8px;
+      top: 8px;
+      background-color: #fff;
+   }
+}
+
+/* Mobile 375px */
+@media (max-width: 375px) {
+   .modal {
+      padding: 64px 20px 32px;
+   }
+   .modal--login {
+      min-width: 335px;
+      min-height: 410px;
+   }
+
+   .modal--register {
+      min-width: 335px;
+      min-height: 670px;
+   }
+
+   .modal--success {
+      min-width: 335px;
+      min-height: 342px;
+   }
+}

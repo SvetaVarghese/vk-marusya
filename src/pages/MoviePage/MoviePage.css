@@ -1,0 +1,100 @@
+.movie-page {
+    padding: 32px 0 120px;
+}
+
+.movie-page__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.movie-info__title {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 48px;
+    margin: 0 0 64px;
+}
+
+.movie-info__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.movie-info__list-item {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+}
+
+.movie-info__list-item:not(:last-child) {
+    margin-bottom: 24px;
+}
+
+.movie-info__category, .movie-info__category-value {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+}
+
+.movie-info__category-wrap {
+    display: flex;
+    gap: 8px;
+}
+
+.movie-info__dashed-line {
+    width: 100%;
+    border-bottom: dashed 1px rgba(255, 255, 255, 0.5);
+}
+
+
+/* Mobile 375px */
+@media (max-width: 375px) {
+    .movie-page {
+        padding: 0 0 32px;
+    }
+
+    .movie-page .movie-view__buttons {
+        display: grid;
+        grid-template-columns: 251px 1fr;
+    }
+
+    .movie-page .movie-view__trailer {
+        grid-column: span 1;
+    }
+
+    .movie-page__wrapper {
+        gap: 56px;
+    }
+
+    .movie-info__title {
+        font-size: 24px;
+        line-height: 32px;
+        margin-bottom: 40px;
+    }
+
+    .movie-info__list-item {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+    }
+
+    .movie-info__list-item:not(:last-child) {
+        margin-bottom: 12px;
+    }
+
+    .movie-info__category {
+        font-size: 14px;
+        line-height: 20px;
+        color: rgba(255, 255, 255, 0.5);
+    }
+
+    .movie-info__category-value {
+        font-size: 18px;
+        line-height: 24px;       
+    }
+
+    .movie-info__dashed-line {
+        display: none;
+    }
+}
